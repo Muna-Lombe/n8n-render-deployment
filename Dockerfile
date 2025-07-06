@@ -1,5 +1,8 @@
 FROM n8nio/n8n:latest
 
+# Switch to root user to install packages
+USER root
+
 # Add PostgreSQL client for Supabase connection
 RUN apk add --no-cache postgresql-client
 
