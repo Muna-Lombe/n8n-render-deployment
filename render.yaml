@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n
+    name: n8n-render-deployment
     env: docker
     plan: standard
     region: oregon
@@ -30,7 +30,7 @@ services:
         value: https
       - key: N8N_HOST
         fromService:
-          name: n8n
+          name: n8n-render-deployment
           type: web
           property: host
       - key: EXECUTIONS_PROCESS
